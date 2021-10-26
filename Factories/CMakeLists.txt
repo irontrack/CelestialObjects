@@ -1,0 +1,5 @@
+add_subdirectory( AbstractFactory )
+add_subdirectory( CelestialFactory )
+add_subdirectory( StarFactory )
+add_subdirectory( PlanetFactory )
+add_subdirectory( MoonFactory )

@@ -1,2 +1,2 @@
 add_subdirectory( Utilities )
-#add_subdirectory( Builder )
+add_subdirectory( Builder )

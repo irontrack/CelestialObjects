@@ -5,6 +5,7 @@
 #include "xoroshiro128plusplus.hpp"
 #include <vector>
 #include <string>
+#include <memory>
 
 
 
@@ -15,11 +16,14 @@ class CelestialBase
 	    virtual void print( int indent = 0 ) = 0;
 		virtual void addChild( std::string body_type ) = 0;
 		xoroshiro128* getRng();
-		std::vector<std::shared_ptr<CelestialBase> >& getChild();
+		std::vector< std::shared_ptr<CelestialBase> >& getChildren();
+		
+	protected:
+	    std::vector< std::shared_ptr<CelestialBase> > children;
 		
     private:
 	    xoroshiro128 m_rng;
-		std::vector< std::shared_ptr<CelestialBase> > children;
+		
 	
 };
 

@@ -26,9 +26,3 @@ void Star::addChild( std::string body_type )
     children.push_back(CelestialFactory::getFactory(body_type)->makeObject(getRng()->fork()));
 
 };       
-
-
-std::vector<std::shared_ptr<CelestialBase> >& Star::getChild()
-{
-    return children;
-};

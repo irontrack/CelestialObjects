@@ -17,7 +17,7 @@ class Star: public CelestialBase
 		void addChild( std::string body_type ) ;		
     private:
 		std::string m_name;
-		std::uint64_t m_mass;
+		std::uint64_t m_mass; //in exagrams (no limit)
 		
 	
 };

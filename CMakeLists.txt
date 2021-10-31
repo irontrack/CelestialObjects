@@ -5,6 +5,8 @@ project( CelestialObjects )
 
 set( CMAKE_BUILD_DIRECTORY bin )
 
+enable_testing()
+
 add_subdirectory( Objects )
 add_subdirectory( Factories )
 add_subdirectory( BuilderUtilities )
@@ -17,3 +19,4 @@ target_link_libraries( ${target}
     Builder
     CelestialBase
 	)
+

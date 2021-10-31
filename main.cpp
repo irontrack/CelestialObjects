@@ -7,14 +7,10 @@
 
 int main(void)
 {
-   
-    std::vector<std::string> vec{"a","b","c"};
-
-	for(auto v: vec)
-	{
-		std::cout << v.c_str() << std::endl;
-	}
-   
+    
+	specifier spec{ "Star" };
+	Builder b(spec);
+	b.getSystem()->print();
 
 	return 0;
 	

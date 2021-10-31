@@ -5,7 +5,7 @@
 
 Planet::Planet(xoroshiro128 rng ): CelestialBase(rng), 
     m_name(planet_names[getRng()->next()%20]),
-    m_mass(getRng()->next()) 
+    m_mass(getRng()->next() % 2'000'000'000'000) 
 {
    
 };

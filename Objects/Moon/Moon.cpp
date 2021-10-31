@@ -5,7 +5,7 @@
 
 Moon::Moon(xoroshiro128 rng ): CelestialBase(rng), 
     m_name(moon_names[getRng()->next()%20]),
-    m_mass(getRng()->next()) 
+    m_mass(getRng()->next() % 200'000) 
 {
    
 };

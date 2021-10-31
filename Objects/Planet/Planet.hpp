@@ -17,9 +17,8 @@ class Planet: public CelestialBase
 		void addChild( std::string body_type ) ;
 		
     private:
-	    std::vector< std::shared_ptr<CelestialBase> > children;
 		std::string m_name;
-		std::uint64_t m_mass;
+		std::uint64_t m_mass; //in exagrams (less than 2e12 Eg)
 		
 	
 };

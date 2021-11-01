@@ -3,11 +3,11 @@
 #include "CelestialFactory.hpp"
 #include <iostream>
 
-Star::Star(xoroshiro128 rng ): CelestialBase(rng), 
-    m_name(star_names[getRng()->next()%20]),
-    m_mass(getRng()->next()) 
+Star::Star(xoroshiro128 rng) : CelestialBase(rng)
 {
-    
+    setName(star_names[getRng()->next() % 20]);
+    setMass(getRng()->next());
+
 };
 
 void Star::print( int indent /*= 0*/ )

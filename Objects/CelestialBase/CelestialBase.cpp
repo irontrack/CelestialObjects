@@ -1,6 +1,9 @@
 #include "CelestialBase.hpp"
 
-CelestialBase::CelestialBase(xoroshiro128 rng ): m_rng(rng) {};
+CelestialBase::CelestialBase( xoroshiro128 rng  ): m_rng(rng)
+{
+
+};
 
 xoroshiro128* CelestialBase::getRng(){return &m_rng;};
 

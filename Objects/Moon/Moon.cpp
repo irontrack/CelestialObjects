@@ -3,11 +3,10 @@
 #include "CelestialFactory.hpp"
 #include <iostream>
 
-Moon::Moon(xoroshiro128 rng ): CelestialBase(rng), 
-    m_name(moon_names[getRng()->next()%20]),
-    m_mass(getRng()->next() % 200'000) 
+Moon::Moon(xoroshiro128 rng ): CelestialBase(rng) 
 {
-   
+    setName(moon_names[getRng()->next() % 20]);
+    setMass(getRng()->next() % 200'000); //in exagrams (less than 2e5)
 };
 
 void Moon::print( int indent /*= 0*/ )

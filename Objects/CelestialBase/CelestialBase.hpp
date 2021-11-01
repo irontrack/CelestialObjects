@@ -17,9 +17,16 @@ class CelestialBase
 		virtual void addChild( std::string body_type ) = 0;
 		xoroshiro128* getRng();
 		std::vector< std::shared_ptr<CelestialBase> >& getChildren();
+		std::string getName() { return m_name; };
+		std::uint64_t getMass() { return m_mass; };
 		
 	protected:
 	    std::vector< std::shared_ptr<CelestialBase> > children;
+		std::string m_name;
+		std::uint64_t m_mass; //in exagrams (no limit)
+		// only for use by derived constructor
+		void setName(std::string name) { m_name = name; };
+		void setMass(std::uint64_t mass) { m_mass = mass; };
 		
     private:
 	    xoroshiro128 m_rng;

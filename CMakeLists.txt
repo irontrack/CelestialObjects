@@ -2,7 +2,11 @@
 cmake_minimum_required( VERSION 3.19.1 )
 
 project( CelestialObjects )
+
 set( CMAKE_BUILD_DIRECTORY bin )
+
+enable_testing()
+
 add_subdirectory( Objects )
 add_subdirectory( Factories )
 add_subdirectory( BuilderUtilities )
@@ -12,5 +16,7 @@ add_executable( ${target} main.cpp )
 
 target_link_libraries( ${target} 
     Utilities
-    Star
+    Builder
+    CelestialBase
 	)
+

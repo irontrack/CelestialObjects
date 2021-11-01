@@ -4,10 +4,13 @@
 #include "CelestialFactory.hpp"
 #include "CelestialBase.hpp"
 
-struct specitifer
+struct specifier
 {
+    specifier(std::string s):type(s){};
+    specifier(std::string s, std::vector<specifier> c): type(s), children(c){};
     std::string type;
     std::vector<specifier> children;
+
 };
 
 class Builder 
@@ -16,8 +19,7 @@ class Builder
         Builder( specifier spec );
         std::shared_ptr<CelestialBase> getSystem(); // return the system
     private:
-        void addElement( specifier spec, 
-            xoroshiro128 rng, 
+        void build( std::vector<specifier> spec, 
             std::shared_ptr<CelestialBase> parent); // recursively  build the system
         std::shared_ptr<CelestialBase> m_system;
         xoroshiro128 m_rng;

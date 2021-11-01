@@ -14,12 +14,6 @@ class Moon: public CelestialBase
 	    Moon( xoroshiro128 rng );
 	    void print( int indent = 0 );
 		void addChild( std::string body_type );
-		std::vector< std::shared_ptr<CelestialBase> >& getChild();
-    private:
-	    std::vector< std::shared_ptr<CelestialBase> > children;
-		std::string m_name;
-		std::uint64_t m_mass;
-		
 	
 };
 

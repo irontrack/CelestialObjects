@@ -3,11 +3,10 @@
 #include "CelestialFactory.hpp"
 #include <iostream>
 
-Planet::Planet(xoroshiro128 rng ): CelestialBase(rng), 
-    m_name(planet_names[getRng()->next()%20]),
-    m_mass(getRng()->next()) 
+Planet::Planet(xoroshiro128 rng ): CelestialBase(rng) 
 {
-   
+    setName(planet_names[getRng()->next() % 20]);
+    setMass(getRng()->next() % 2'000'000'000'000); //in exagrams (less than 2e12 Eg)
 };
 
 void Planet::print( int indent /*= 0*/ )
@@ -26,7 +25,3 @@ void Planet::addChild( std::string body_type )
     children.push_back(CelestialFactory::getFactory(body_type)->makeObject(getRng()->fork()));
 
 };       
-std::vector< std::shared_ptr<CelestialBase> >& Planet::getChild()
-{
-    return children;
-};

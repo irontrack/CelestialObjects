@@ -8,3 +8,7 @@ to extend the project to include the use of a factory pattern.
 
 Jason’s video:
 https://www.youtube.com/watch?v=xMdwK9p5qOw
+
+## TASKS
+- [ ] add constructor overloading to factorys and objects; unique names, mass, rng seed.
+- [ ] update print methods.

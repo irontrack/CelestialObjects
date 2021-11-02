@@ -8,9 +8,32 @@
 int main(void)
 {
     
-	specifier spec{ "Star" };
-	Builder b(spec);
-	b.getSystem()->print();
+	specifier systemSpec{ "Star" , std::vector<specifier>{
+		//Planets
+		specifier{ "Planet"
+
+		},
+		specifier{ "Planet", std::vector<specifier>{
+			specifier{ "Moon"}
+			}
+		},
+		specifier{ "Planet", std::vector<specifier>{
+			specifier{ "Moon"}
+			}
+		},
+		specifier{ "Planet", std::vector<specifier>{
+			specifier{ "Moon"},
+			specifier{ "Moon"}
+			}
+		},
+
+
+	} };
+	
+	Builder system(systemSpec);
+
+	system.getSystem()->print(2);
+
 
 	return 0;
 	

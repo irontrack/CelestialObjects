@@ -10,5 +10,5 @@ Jason’s video:
 https://www.youtube.com/watch?v=xMdwK9p5qOw
 
 ## TASKS
-- [ ] add constructor overloading to factorys and objects; unique names, mass, rng seed.
+- [ ] add constructor overloading to factories and objects; unique names, mass, rng seed.
 - [ ] update print methods.
